@@ -10,7 +10,7 @@ const luapack = require('gulp-luapack')
 const rename = require('gulp-rename')
 
 gulp.task('pack', function() { // create a new gulp task
-  return gulp.src('file.lua') // load main file
+  return gulp.src('./file.lua') // load main file
 		.pipe(luapack()) // pipe into luapack
 		.pipe(rename('file.packed.lua')) // rename file
 		.pipe(gulp.dest('./')); // output file
